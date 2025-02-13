@@ -12,14 +12,35 @@ Make a list that contains the information on a single playing card. Suit, face, 
 
 ```{r}
 
+card <- list(
+  face = "ace", 
+  suit = "hearts",
+  value = "1"
+)
+card
+ ## face suit value
+ ## king spades 13 
 
+card_options <- list(
+  suit = c("spades", "heart", "clubs", "diamond"),
+  face = c("king", "queen", "jack", "ace"),
+  value = c(13, 12, 11, 10)
+)
 ```
 
 
 Make a second list where each element contains all the options for suit, face, and value, respectively. 
 
 ```{r}
+df <- list(face = "ace", suit = "hearts", value = 1)
+c(face = "ace", suit = "hearts", value = "one")
 
+df
+
+## face suit value
+## ace clubs 1
+## two clubs 2
+## six clubs 3
 
 ```
 
@@ -28,7 +49,10 @@ If `Newlist <- list(a=1:10, b="Good morning", c="Hi")`, write an R statement tha
 
 ```{r}
 Newlist <- list(a=1:10, b="Good morning", c="Hi")
+ #ADD 1 to each vector in newlist
 
+#Option 1 
+Newlist <- Newlist$a + 1 
 
 ```
 
@@ -36,6 +60,9 @@ If `b <- list(a=1:10, c="Hello", d="AA")`, write an R expression that will give 
 
 ```{r}
 b <- list(a=1:10, c="Hello", d="AA")
+b$a[-2]
+
+b$a[b$a > 7]
 
 
 ```
@@ -45,5 +72,7 @@ Let `x <- list(a=5:10, c="Hello", d="AA")`, write an R statement to add a new it
 ```{r}
 x <- list(a=5:10, c="Hello", d="AA")
 
+x$z <- "NewItem"
+x
 
 ```
